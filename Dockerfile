@@ -13,5 +13,5 @@ ENV PATH="$HOME/bin:$PATH"
 RUN mkdir -p ~/bin && mkdir -p ~/android/lineage
 # Android git
 WORKDIR ~/android/lineage
-RUN repo init -u https://github.com/LineageOS/android.git -b lineage-16.0
-RUN repo sync
+ADD run.sh /root/run.sh
+CMD $HOME/run.sh
