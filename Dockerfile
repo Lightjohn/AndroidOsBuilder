@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 # repo command
 RUN mkdir ~/bin && curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
-ENV PATH="$HOME/bin:$PATH"
+ENV PATH="/root/bin:$PATH"
 # folders
 RUN mkdir -p ~/bin && mkdir -p ~/android/lineage
 # Android git
