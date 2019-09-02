@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # folders
 RUN mkdir -p /root/bin && mkdir -p /root/android/lineage
 # repo command
-RUN mkdir /root/bin && curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > /root/bin/repo && chmod a+x /root/bin/repo
+RUN curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > /root/bin/repo && chmod a+x /root/bin/repo
 ENV PATH="/root/bin:$PATH"
 # Android git
 WORKDIR /root/android/lineage
