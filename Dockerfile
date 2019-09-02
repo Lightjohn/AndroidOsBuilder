@@ -13,5 +13,9 @@ ENV PATH="/root/bin:$PATH"
 RUN mkdir -p ~/bin && mkdir -p ~/android/lineage
 # Android git
 WORKDIR ~/android/lineage
+# FIX
+# Missing python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 ADD run.sh /root/run.sh
 CMD $HOME/run.sh
