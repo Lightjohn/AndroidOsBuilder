@@ -6,16 +6,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync \
     schedtool squashfs-tools xsltproc zip zlib1g-dev python ca-certificates \
     && rm -rf /var/lib/apt/lists/*
-# repo command
-RUN mkdir ~/bin && curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
-ENV PATH="/root/bin:$PATH"
+
 # folders
-RUN mkdir -p ~/bin && mkdir -p ~/android/lineage
+RUN mkdir -p /root/bin && mkdir -p /root/android/lineage
+# repo command
+RUN mkdir /root/bin && curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > /root/bin/repo && chmod a+x /root/bin/repo
+ENV PATH="/root/bin:$PATH"
 # Android git
-WORKDIR ~/android/lineage
-# FIX
-# Missing python
-# RUN ln -s /usr/bin/python3 /usr/bin/python
+WORKDIR /root/android/lineage
 
 ADD run.sh /root/run.sh
 CMD $HOME/run.sh
