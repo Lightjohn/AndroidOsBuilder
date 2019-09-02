@@ -7,9 +7,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     schedtool squashfs-tools xsltproc zip zlib1g-dev \
     && rm -rf /var/lib/apt/lists/*
 # repo command
-RUN mkdir ~/bin && curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
+RUN mkdir ~/bin && curl --insecure https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo && chmod a+x ~/bin/repo
 ENV PATH="$HOME/bin:$PATH"
 # folders
 RUN mkdir -p ~/bin && mkdir -p ~/android/lineage
 # Android git
-RUN cd ~/android/lineage && repo init -u https://github.com/LineageOS/android.git -b lineage-16.0
+WORKDIR ~/android/lineage
+RUN repo init -u https://github.com/LineageOS/android.git -b lineage-16.0
+RUN repo sync
