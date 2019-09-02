@@ -5,4 +5,4 @@ services:
     container_name: android_builder
     build: .
     volumes:
-      - androidbuild:/root/android/lineage
+      - ./androidbuild:/root/android/lineage
