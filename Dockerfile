@@ -16,4 +16,4 @@ ENV PATH="/root/bin:$PATH"
 WORKDIR /root/android/lineage
 
 ADD run.sh /root/run.sh
-CMD $HOME/run.sh
+CMD ["bash", "/root/run.sh"]
