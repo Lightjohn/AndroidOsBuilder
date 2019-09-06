@@ -6,3 +6,5 @@ services:
     build: .
     volumes:
       - ./androidbuild:/root/android/lineage
+    environment:
+      - BUILD_NAME=bacon
