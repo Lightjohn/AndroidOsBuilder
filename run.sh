@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 if [[ ! -d vendor/${BUILD_NAME} ]]; then
   echo "WARNING no folder for ${BUILD_NAME} found in vendor, did you extracted the proprietary blobs"
 fi
