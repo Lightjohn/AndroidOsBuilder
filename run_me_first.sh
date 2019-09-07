@@ -7,3 +7,4 @@ cp -r blobs_bacon/bacon androidbuild/vendor
 git clone  https://github.com/TeamExodus/vendor_oppo_msm8974-common.git blobs_oppo
 mkdir -p androidbuild/vendor/oppo/msm8974-common
 cp -r blobs_oppo/* androidbuild/vendor/oppo/msm8974-common
+cd androidbuild/vendor/oppo/msm8974-common/proprietary/ && ln -s bin/* vendor/bin
