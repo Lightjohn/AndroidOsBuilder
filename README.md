@@ -1,11 +1,24 @@
 # README #
 
-Using
-https://wiki.lineageos.org/devices/bacon/build
+Based on LineageOs latest builds available
 
 # Usage
-Run `run_me_`
+Run `run_me_first_XXXX.sh` where `XXXX` is your device
 
-# Progression
+Then `docker-compose up --build -d`
 
-https://wiki.lineageos.org/devices/bacon/build#extract-proprietary-blobs
+To follow the logs: `docker-compose logs --tail=10 -f android`
+
+# Config
+Change them in `docker-compose.yml`
+## bacon
+* BUILD_NAME=bacon
+* BRANCH_NAME=lineage-16.0
+
+## mondrianwifi
+* BUILD_NAME=mondrianwifi
+* BRANCH_NAME=cm-14.1
+
+## Sources
+* [bacon](https://wiki.lineageos.org/devices/bacon/build)
+* [mondrianwifi](https://wiki.lineageos.org/devices/mondrianwifi/build)
