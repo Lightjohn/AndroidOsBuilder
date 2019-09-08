@@ -7,7 +7,7 @@ if [[ ! -d vendor/oppo ]]; then
 fi
 repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
 echo "SYNCING" `date +"%m-%d-%Y %T"`
-repo sync > sync.log
+#repo sync > sync.log
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
 breakfast "${BUILD_NAME}"
