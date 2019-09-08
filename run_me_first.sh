@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Some Bacon proprietary stuff
 git clone https://github.com/jrior001/proprietary_vendor_oneplus.git blobs_bacon
-mkdir -p androidbuild/vendor
-cp -r blobs_bacon/bacon androidbuild/vendor
+mkdir -p androidbuild/vendor/oneplus
+cp -r blobs_bacon/bacon androidbuild/vendor/oneplus
 # Same for oppo
 git clone  https://github.com/TeamExodus/vendor_oppo_msm8974-common.git blobs_oppo
 mkdir -p androidbuild/vendor/oppo/msm8974-common

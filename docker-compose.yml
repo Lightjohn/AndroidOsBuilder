@@ -8,3 +8,4 @@ services:
       - ./androidbuild:/root/android/lineage
     environment:
       - BUILD_NAME=bacon
+      - BRANCH_NAME=lineage-16.0
