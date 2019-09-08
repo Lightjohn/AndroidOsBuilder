@@ -11,7 +11,7 @@ echo "SYNCING" `date +"%m-%d-%Y %T"`
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
 breakfast "${BUILD_NAME}"
-# TODO CCACHE + SIGNED
+# TODO SIGNED
 echo "BUILDING" `date +"%m-%d-%Y %T"`
 croot
 brunch "${BUILD_NAME}"

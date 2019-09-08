@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     schedtool squashfs-tools xsltproc zip zlib1g-dev python ca-certificates unzip zip \
     && rm -rf /var/lib/apt/lists/*
 
+RUN ccache -M 50G
 # folders
 RUN mkdir -p /root/bin && mkdir -p /root/android/lineage
 # repo command

@@ -9,3 +9,5 @@ services:
     environment:
       - BUILD_NAME=bacon
       - BRANCH_NAME=lineage-16.0
+      - USE_CCACHE=1
+      - CCACHE_DIR=/root/android/lineage/.ccache
