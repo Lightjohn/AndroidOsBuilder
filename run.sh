@@ -5,6 +5,9 @@ fi
 if [[ ! -d vendor/oppo ]]; then
   echo "WARNING no folder for oppo found in vendor, did you extracted the proprietary blobs"
 fi
+if [[ $CLEAN_BUILD == "1" ]]; then
+  rm -rf /root/android/lineage/.repo
+fi
 repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
 echo "SYNCING" `date +"%m-%d-%Y %T"`
 repo sync > sync.log

@@ -11,6 +11,10 @@ To follow the logs: `docker-compose logs --tail=10 -f android`
 
 # Config
 Change them in `docker-compose.yml`
+
+# Options
+* CLEAN_BUILD=1 will delete previously cloned repo before syncing
+
 ## bacon
 * BUILD_NAME=bacon
 * BRANCH_NAME=lineage-16.0
