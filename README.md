@@ -12,8 +12,12 @@ To follow the logs: `docker-compose logs --tail=10 -f android`
 # Config
 Change them in `docker-compose.yml`
 
-# Options
+# Builder Options
 * CLEAN_BUILD=1 will delete previously cloned repo before syncing
+* SKIP_INIT=1 will skip git init and git sync (might be super slow)
+
+# Android build options
+* STOCK_ROM_DIR=/path/to/proprietary/vendor/files ./extract-files.sh
 
 ## bacon
 * BUILD_NAME=bacon
@@ -34,3 +38,7 @@ Change them in `docker-compose.yml`
 * [android_vendor_samsung_mondrianwifi](https://github.com/Valera1978/android_vendor_samsung_mondrianwifi)
 * [android_device_samsung_mondrianlte](https://github.com/Valera1978/android_device_samsung_mondrianlte)
 * [android_vendor_samsung_mondrianlte](https://github.com/Valera1978/android_vendor_samsung_mondrianlte)
+
+
+## DEBUG
+docker run android bash
