@@ -19,10 +19,10 @@ if [[ $CLEAN_BUILD == "1" ]]; then
 fi
 if [[ $SKIP_INIT != "1" ]]; then
   echo "INIT"
-  echo "N" | repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
+  repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
   echo "SYNCING" `date +"%m-%d-%Y %T"`
 
-  if [[ -d /home/builder/roomservice.xml ]]; then
+  if [[ -f /home/builder/roomservice.xml ]]; then
     mkdir -d .repo/local_manifests/
     cp /home/builder/roomservice.xml .repo/local_manifests/
   else
