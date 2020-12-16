@@ -1,5 +1,7 @@
 FROM ubuntu:18.04
 # DEPENDENCIES
+ENV UID=1000
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf \
     imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev \
