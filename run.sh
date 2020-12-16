@@ -19,7 +19,7 @@ if [[ $CLEAN_BUILD == "1" ]]; then
 fi
 if [[ $SKIP_INIT != "1" ]]; then
   echo "INIT"
-  repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
+  repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}" >> pre_build.log 2>&1
   echo "SYNCING" `date +"%m-%d-%Y %T"`
 
   if [[ -f /home/builder/roomservice.xml ]]; then
@@ -29,7 +29,7 @@ if [[ $SKIP_INIT != "1" ]]; then
     echo "No roomservice.xml found"
   fi
 
-  repo sync -j8
+  repo sync -j8 >> pre_build.log 2>&1
 fi
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
