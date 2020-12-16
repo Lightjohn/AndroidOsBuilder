@@ -7,7 +7,6 @@ services:
       context: .
       args:
         UID: 1001
-
     volumes:
       - ./androidbuild:/home/builder/android/lineage
     environment:
@@ -16,5 +15,3 @@ services:
       - USE_CCACHE=1
       - CCACHE_DIR=/home/builder/android/lineage/.ccache
       - CLEAN_BUILD=0
-
-        UID=

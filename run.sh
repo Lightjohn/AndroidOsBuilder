@@ -6,13 +6,13 @@ if [[ ! -d vendor/oppo ]]; then
   echo "WARNING no folder for oppo found in vendor, did you extracted the proprietary blobs"
 fi
 
-/home/builder/run_me_first_${BUILD_NAME}.sh
-
 git config --global user.email "test@nobody.com"
 git config --global user.name "not me"
 
+/home/builder/run_me_first_${BUILD_NAME}.sh
+
 if [[ $CLEAN_BUILD == "1" ]]; then
-  rm -rf /root/android/lineage/.repo
+  rm -rf /home/builder/android/lineage/.repo
 fi
 if [[ $SKIP_INIT != "1" ]]; then
   repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
