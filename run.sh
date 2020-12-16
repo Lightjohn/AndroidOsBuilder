@@ -6,6 +6,8 @@ if [[ ! -d vendor/oppo ]]; then
   echo "WARNING no folder for oppo found in vendor, did you extracted the proprietary blobs"
 fi
 
+/home/builder/run_me_first_${BUILD_NAME}.sh
+
 git config --global user.email "test@nobody.com"
 git config --global user.name "not me"
 
@@ -19,13 +21,15 @@ if [[ $SKIP_INIT != "1" ]]; then
   if [[ -d roomservice.xml ]]; then
     mkdir -d .repo/local_manifests/
     cp roomservice.xml .repo/local_manifests/
-fi
+  else
+    echo "No roomservice.xml found"
+  fi
 
-  repo sync > sync.log
+  repo sync -j8
 fi
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
-breakfast "${BUILD_NAME}"
+# breakfast "${BUILD_NAME}" # Only brunch matters
 # TODO SIGNED
 echo "BUILDING" `date +"%m-%d-%Y %T"`
 croot

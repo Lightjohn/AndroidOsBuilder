@@ -5,10 +5,11 @@ services:
     container_name: android_builder
     build: .
     volumes:
-      - ./androidbuild:/root/android/lineage
+      - ./androidbuild:/home/builder/android/lineage
     environment:
       - BUILD_NAME=mondrianwifi
       - BRANCH_NAME=lineage-17.1
       - USE_CCACHE=1
-      - CCACHE_DIR=/root/android/lineage/.ccache
+      - CCACHE_DIR=/home/builder/android/lineage/.ccache
       - CLEAN_BUILD=0
+      - UID=1001

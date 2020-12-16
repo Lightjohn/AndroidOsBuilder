@@ -32,9 +32,10 @@ Change them in `docker-compose.yml`
 * [lineageos](https://github.com/LineageOS/android)
 * [bacon](https://wiki.lineageos.org/devices/bacon/build)
 * [mondrianwifi](https://wiki.lineageos.org/devices/mondrianwifi/build)
+* [LineageOs build.sh](https://github.com/lineageos-infra/build-config/blob/lineage-16.0/android/build.sh)
 
 ## Sources MondrianWifi
-* [android_device_samsung_mondrianwifi](https://github.com/Valera1978/android_device_samsung_mondrianwifi)
+* [android_device_samsung_mondrianwifi (doc)](https://github.com/Valera1978/android_device_samsung_mondrianwifi)
 * [android_vendor_samsung_mondrianwifi](https://github.com/Valera1978/android_vendor_samsung_mondrianwifi)
 * [android_device_samsung_mondrianlte](https://github.com/Valera1978/android_device_samsung_mondrianlte)
 * [android_vendor_samsung_mondrianlte](https://github.com/Valera1978/android_vendor_samsung_mondrianlte)
