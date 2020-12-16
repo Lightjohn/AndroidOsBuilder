@@ -23,7 +23,7 @@ if [[ $SKIP_INIT != "1" ]]; then
   echo "SYNCING" `date +"%m-%d-%Y %T"`
 
   if [[ -f /home/builder/roomservice.xml ]]; then
-    mkdir -d .repo/local_manifests/
+    mkdir -p .repo/local_manifests/
     cp /home/builder/roomservice.xml .repo/local_manifests/
   else
     echo "No roomservice.xml found"
