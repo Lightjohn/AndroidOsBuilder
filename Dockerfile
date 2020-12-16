@@ -22,6 +22,6 @@ ENV PATH="/home/builder/bin:$PATH"
 # Android git
 WORKDIR /home/builder/android/lineage
 
-ADD mondrianwifi/roomservice.xml roomservice.xml
+ADD mondrianwifi/roomservice.xml /home/builder/roomservice.xml
 ADD *.sh /home/builder/
 CMD ["bash", "/home/builder/run.sh"]

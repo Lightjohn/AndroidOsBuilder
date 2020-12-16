@@ -8,6 +8,7 @@ fi
 
 git config --global user.email "test@nobody.com"
 git config --global user.name "not me"
+git config --global color.ui false
 
 /home/builder/run_me_first_${BUILD_NAME}.sh
 
@@ -21,9 +22,9 @@ if [[ $SKIP_INIT != "1" ]]; then
   echo "N" | repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
   echo "SYNCING" `date +"%m-%d-%Y %T"`
 
-  if [[ -d roomservice.xml ]]; then
+  if [[ -d /home/builder/roomservice.xml ]]; then
     mkdir -d .repo/local_manifests/
-    cp roomservice.xml .repo/local_manifests/
+    cp /home/builder/roomservice.xml .repo/local_manifests/
   else
     echo "No roomservice.xml found"
   fi
