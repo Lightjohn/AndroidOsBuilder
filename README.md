@@ -43,4 +43,4 @@ Change them in `docker-compose.yml`
 
 ## DEBUG
 
-`docker run android bash`
+`docker-compose run android bash`

@@ -3,7 +3,11 @@ version: '3'
 services:
   android:
     container_name: android_builder
-    build: .
+    build:
+      context: .
+      args:
+        UID: 1001
+
     volumes:
       - ./androidbuild:/home/builder/android/lineage
     environment:
@@ -12,4 +16,5 @@ services:
       - USE_CCACHE=1
       - CCACHE_DIR=/home/builder/android/lineage/.ccache
       - CLEAN_BUILD=0
-      - UID=1001
+
+        UID=

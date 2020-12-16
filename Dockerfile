@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 # DEPENDENCIES
-ENV UID=1000
+ARG UID
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf \
