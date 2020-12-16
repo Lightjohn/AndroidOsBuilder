@@ -11,11 +11,14 @@ git config --global user.name "not me"
 
 /home/builder/run_me_first_${BUILD_NAME}.sh
 
+echo "Preparing build"
+
 if [[ $CLEAN_BUILD == "1" ]]; then
   rm -rf /home/builder/android/lineage/.repo
 fi
 if [[ $SKIP_INIT != "1" ]]; then
-  repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
+  echo "INIT"
+  echo "N" | repo init -u https://github.com/LineageOS/android.git -b "${BRANCH_NAME}"
   echo "SYNCING" `date +"%m-%d-%Y %T"`
 
   if [[ -d roomservice.xml ]]; then
