@@ -1,11 +1,5 @@
 #!/bin/bash
-if [[ ! -d vendor/oneplus/${BUILD_NAME} ]]; then
-  echo "WARNING no folder for ${BUILD_NAME} found in vendor, did you extracted the proprietary blobs"
-fi
-if [[ ! -d vendor/oppo ]]; then
-  echo "WARNING no folder for oppo found in vendor, did you extracted the proprietary blobs"
-fi
-
+# Setting git so that it will not stop build
 git config --global user.email "test@nobody.com"
 git config --global user.name "not me"
 git config --global color.ui false
@@ -27,7 +21,7 @@ if [[ $SKIP_INIT != "1" ]]; then
     echo "No roomservice.xml found"
   fi
 
-  repo sync -j8 >> pre_build.log 2>&1
+  repo sync -j8 --force-sync >> pre_build.log 2>&1
 fi
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
