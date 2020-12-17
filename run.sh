@@ -10,8 +10,6 @@ git config --global user.email "test@nobody.com"
 git config --global user.name "not me"
 git config --global color.ui false
 
-/home/builder/run_me_first_${BUILD_NAME}.sh
-
 echo "Preparing build"
 
 if [[ $CLEAN_BUILD == "1" ]]; then
@@ -33,9 +31,8 @@ if [[ $SKIP_INIT != "1" ]]; then
 fi
 echo "CONFIGURING" `date +"%m-%d-%Y %T"`
 source build/envsetup.sh
-# breakfast "${BUILD_NAME}" # Only brunch matters
-# TODO SIGNED
+
 echo "BUILDING" `date +"%m-%d-%Y %T"`
-croot
+
 brunch "${BUILD_NAME}"
 echo "DONE output: ${OUT}"

@@ -44,3 +44,7 @@ Change them in `docker-compose.yml`
 ## DEBUG
 
 `docker-compose run android bash`
+
+## ToDo
+* mv `run_me_first_bacon.sh` to `bacon/roomservice.xml`
+* Signed
