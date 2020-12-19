@@ -3,7 +3,7 @@
 Based on LineageOs latest builds available
 
 # Usage
-Run `run_me_first_XXXX.sh` where `XXXX` is your device
+Optional: Change `UID` in docker compose to match your local UID
 
 Then `docker-compose up --build -d`
 
@@ -19,7 +19,7 @@ Change them in `docker-compose.yml`
 # Android build options
 * STOCK_ROM_DIR=/path/to/proprietary/vendor/files ./extract-files.sh
 
-## bacon
+## bacon (deprecated as I don't have bacon anymore)
 * BUILD_NAME=bacon
 * BRANCH_NAME=lineage-16.0
 
@@ -28,7 +28,7 @@ Change them in `docker-compose.yml`
 * BRANCH_NAME=cm-14.1
 
 ### In roomservice.xml
-now using `Lightjohn/android_vendor_samsung_mondrianwifi.git` instead of `Valera1978/android_vendor_samsung_mondrianwifi.git`
+now using `q240627995/android_device_samsung_mondrianwifi` instead of `Valera1978/android_device_samsung_mondrianwifi`
 
 ## Sources
 * [xda post](https://forum.xda-developers.com/t/rom-t320-t325-unofficial-lineageos-17-1-android-10-0-q-20200815.4014565/) 
