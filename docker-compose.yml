@@ -3,12 +3,14 @@ version: '3'
 services:
   android:
     container_name: android_builder
+    privileged: true
     build:
       context: .
       args:
         UID: 1001
     volumes:
       - ./androidbuild:/home/builder/android/lineage
+      - /dev/bus/usb:/dev/bus/usb
     environment:
       - BUILD_NAME=mondrianwifi
       - BRANCH_NAME=lineage-17.1

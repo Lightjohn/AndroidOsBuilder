@@ -27,6 +27,9 @@ Change them in `docker-compose.yml`
 * BUILD_NAME=mondrianwifi
 * BRANCH_NAME=cm-14.1
 
+### In roomservice.xml
+now using `Lightjohn/android_vendor_samsung_mondrianwifi.git` instead of `Valera1978/android_vendor_samsung_mondrianwifi.git`
+
 ## Sources
 * [xda post](https://forum.xda-developers.com/t/rom-t320-t325-unofficial-lineageos-17-1-android-10-0-q-20200815.4014565/) 
 * [lineageos](https://github.com/LineageOS/android)
